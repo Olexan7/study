@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Системы линейных уравнений</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <boby>
+        <div> 
+            <div id= "container"></div>
+            <font size=5> Количество неизвестных величин x в системе: </font><input id='rowCount' class ='inp' type='text' value="3"/><br />
+            <font size=5>Количество уравнений: </font><input id='colCount' class ='inp' type='text' value="3"/><br/>
+            <input type="button" class ='btn' id="generateMatrix" value="Сгенерировать" onclick="generateForms()">
+            <input type="button" class ='btn' id="randomMatrix" value = "Заполнить случайными числами" onclick="randomTable()"> </br> </br>
+        </div>
+        
+        <form id = "inputField">
+            <div id= "forms"></div>
+        </form>
+
+        <div id='div_1' style='display:none'>
+            <input type="button" class ='btn' id="alterMatrix" value = "Составить таблицу" onclick="createTable()">
+            <div id = "table_div">
+                <table id = "table"></table>
+            </div>
+        </div>
+
+        <div id = "step" style='display:none'>
+            <input type = "button" class ='btn' id = "calc" value = "Вычислить" onclick="calc()"> </br>
+            <div id="decision"></div>
+        </div>
+
+        <div id = "otvet">
+            <div id="answer"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </boby>
+</html>
