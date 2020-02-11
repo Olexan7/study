@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Системы линейных уравнений</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div> 
+        <div id= "container"></div>
+        <font size=5> Количество неизвестных величин X в системе: </font><input id='Count' class ='inp' type='text' value="3"/><br />
+        <input type="button" class ='btn' id="generateMatrix" value="Сгенерировать" onclick="generateForms()">
+        <input type="button" class ='btn' id="rangomMatrix" value="Заполнить случайными числами" onclick="randomTable()">
+        <input type="button" class ='btn' id="checkMatrix" value="Пример" onclick="checkTable()"></br>
+    </div>
+    
+    <form id = "inputField">
+        <div id= "forms"></div>
+    </form>
+
+    <div id='div_1' style='display:none'>
+        <input type = "button" class ='btn' id = "kvadrat" value = "Вычислить методом квадратного корня" onclick="kvadrat()"> </br>
+        <input type="button" class ='btn' id="holeczki" value = "Вычислить методом Холецкого" onclick="holeczki()"> </br>
+        <input type = "button" class ='btn' id = "yakobi" value = "Вычислить методом Якоби" onclick="epsJakob()"> </br>
+        <input type = "button" class ='btn' id = "zeidel" value = "Вычислить методом Зейделя" onclick="epsZeid()"> </br>
+        
+    </div>
+
+    <div id = "otvet">
+        <div id = 'zeid' style='display:none'>
+            <font size=5> Решить с точностью ε =  </font><input id='count_eps' class ='inp' type='text' value="0.02"/><br />
+            <input type = "button" class ='btn' id = "zeidel_eps" value = "Вычислить" onclick="zeidel()"> </br>
+        </div>
+
+        <div id = 'yakob' style='display:none'>
+            <font size=5> Решить с точностью ε =  </font><input id='count_eps' class ='inp' type='text' value="0.02"/><br />
+            <input type = "button" class ='btn' id = "jacob_eps" value = "Вычислить" onclick="jakobian()"> </br>
+        </div>
+
+        <div id="answer">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="holeczki.js"></script>
+    <script src="zeidel.js"></script>
+    <script src="yakobi.js"></script>
+    <script src="kvadrat.js"></script>
+</body>
+</html>
